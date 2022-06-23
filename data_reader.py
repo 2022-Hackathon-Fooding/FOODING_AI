@@ -64,12 +64,12 @@ class DataReader():
 
         X = X / np.max(X, axis=0)
 
-        #train_X, test_X, train_Y, test_Y = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=50)
+        train_X, test_X, train_Y, test_Y = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=50)
 
-        train_X = X[:int(len(X)*0.8)]
-        train_Y = Y[:int(len(Y)*0.8)]
-        test_X = X[int(len(X)*0.8):]
-        test_Y = Y[int(len(Y)*0.8):]
+        #train_X = X[:int(len(X)*0.8)]
+        #train_Y = Y[:int(len(Y)*0.8)]
+        #test_X = X[int(len(X)*0.8):]
+        #test_Y = Y[int(len(Y)*0.8):]
 
         return train_X, train_Y, test_X, test_Y
 

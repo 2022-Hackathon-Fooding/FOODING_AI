@@ -11,12 +11,12 @@ import network
 
 test_d=[[0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0]]
 
-answer=network.model.predict(test_d)
+#answer=network.model.predict(test_d)
 
 #answer1=answer[0][0]
 #answer2=answer[0][1]
 #answer3=answer[0][2]
 
-print(answer)
+#print(answer)
 
 data_reader.draw_graph(network.history)

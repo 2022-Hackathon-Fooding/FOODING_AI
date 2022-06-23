@@ -29,13 +29,13 @@ dr = data_reader.DataReader()
 # 인공신경망을 제작합니다.
 model = keras.Sequential([
     keras.layers.Dense(16),
+    keras.layers.Dense(8, activation="relu"),
+    keras.layers.Dropout(rate=0.2),
     keras.layers.Dense(32, activation="relu"),
     keras.layers.Dropout(rate=0.2),
     keras.layers.Dense(32, activation="relu"),
+    #keras.layers.Dense(128, activation="relu"),
     #keras.layers.Dropout(rate=0.2),
-    #keras.layers.Dense(128, activation="relu"),
-    #keras.layers.Dense(128, activation="relu"),
-    keras.layers.Dropout(rate=0.2),
     keras.layers.Dense(3, activation='softmax')
 ])
 
@@ -61,7 +61,7 @@ model.summary()
 
 
 
-#tfjs.converters.save_keras_model(model, "data/")
+tfjs.converters.save_keras_model(model, "data/")
 
 
 
