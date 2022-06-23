@@ -24,7 +24,7 @@ class DataReader():
 
     def read_data(self):
         print("Reading Data...")
-        file = open("data/preprocessing/after_one-hot_encoding.csv")
+        file = open("data/test/after_one-hot_encoding_cut_feature.csv")
         data = []
         for line in file:
             splt = line.split(",")
