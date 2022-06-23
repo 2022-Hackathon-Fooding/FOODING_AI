@@ -35,6 +35,32 @@
 
 ## 활용/참고 정보
 
+#### 원-핫 인코딩
+##### https://wikidocs.net/22647
+#### 다중 분류란?
+##### https://yhyun225.tistory.com/14
+#### 소프트맥스
+##### https://blog.naver.com/hobbang143/221735605346
+#### logistic regression
+##### https://velog.io/@arittung/DeepLearningStudyDay7
+##### https://blog.naver.com/PostView.naver?blogId=psycomaniac&logNo=222472359036&parentCategoryNo=&categoryNo=7&viewDate=&isShowPopularPosts=true&from=search
+#### decision tree
+##### https://eunsour.tistory.com/57
+##### https://www.google.com/search?q=decision+tree+%EB%8B%A4%EC%A4%91%EB%B6%84%EB%A5%98&newwindow=1&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjSs-2Xz8P4AhXam1YBHT0CDQcQ_AUoAXoECAEQAw&cshid=1655988991854045&biw=1112&bih=837&dpr=1#imgrc=oMdHjv-s9ZPsdM
+#### random forest
+##### https://hayden-archive.tistory.com/300
+#### 딥러닝 다중분류 모델
+##### https://incomeplus.tistory.com/243
+##### https://knowledgeforengineers.tistory.com/138
+#### compile 파라미터
+##### https://blog.naver.com/handuelly?Redirect=Log&logNo=221822938182
+#### fit 파라미터
+##### https://www.tensorflow.org/guide/keras/customizing_what_happens_in_fit?hl=ko
+#### 모델 json 파일 저장
+##### https://www.tensorflow.org/js/tutorials/conversion/import_keras?hl=ko
+#### model.summary
+##### https://afsdzvcx123.tistory.com/entry/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%EC%9A%B0-%EB%AA%A8%EB%8D%B8-summary-param-%EC%9D%98%EB%AF%B8
+
 ---
 
 ## 테스트 환경
