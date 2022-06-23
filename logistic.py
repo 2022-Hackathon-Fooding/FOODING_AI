@@ -9,16 +9,16 @@ print(dr)
 lr = LogisticRegression(C=10, max_iter=1000,multi_class='auto')
 lr.fit(dr.train_X, dr.train_Y)
 
-print(lr.predict(dr.test_X[:16]))
+print(lr.predict(dr.test_X[:9]))
 
-proba = lr.predict_proba(dr.test_X[:16])
+proba = lr.predict_proba(dr.test_X[:9])
 print(np.round(proba, decimals=3))
 
 print(lr.classes_)
 
 print(lr.coef_.shape, lr.intercept_.shape)
 
-decision = lr.decision_function(dr.test_X[:16])
+decision = lr.decision_function(dr.test_X[:9])
 print(np.round(decision, decimals=2))
 
 proba = softmax(decision, axis=1)

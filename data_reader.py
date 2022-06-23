@@ -48,7 +48,8 @@ class DataReader():
             feature_16 = float(splt[15].strip())
 
             label = self.label.index(splt[16].strip())
-            data.append(((feature_1, feature_2, feature_3, feature_4,feature_5,feature_6,feature_7,feature_8,feature_9,feature_10,feature_11,feature_12,feature_13,feature_14,feature_15,feature_16), label))
+            data.append(((feature_1, feature_2, feature_3, feature_4,feature_5,feature_6,feature_7,feature_8,
+                          feature_9,feature_10,feature_11,feature_12,feature_13,feature_14,feature_15),feature_16,label))
 
         random.shuffle(data)
 

@@ -12,7 +12,7 @@ import tensorflowjs as tfjs
 import numpy as np
 
 # 몇 에포크 만큼 학습을 시킬 것인지 결정합니다.
-EPOCHS = 500  # 예제 기본값은 20입니다.
+EPOCHS = 200  # 예제 기본값은 20입니다.
 
 # 데이터를 읽어옵니다.
 dr = data_reader.DataReader()
@@ -28,14 +28,14 @@ dr = data_reader.DataReader()
 
 # 인공신경망을 제작합니다.
 model = keras.Sequential([
-    keras.layers.Dense(16),
+    keras.layers.Dense(9),
     keras.layers.Dense(32, activation="relu"),
-    keras.layers.Dropout(rate=0.2),
+    #keras.layers.Dropout(rate=0.2),
     keras.layers.Dense(32, activation="relu"),
-    keras.layers.Dropout(rate=0.2),
+    #keras.layers.Dropout(rate=0.2),
     #keras.layers.Dense(64, activation="relu"),
-    keras.layers.Dense(64, activation="relu"),
-    keras.layers.Dropout(rate=0.2),
+    #keras.layers.Dense(64, activation="relu"),
+    #keras.layers.Dropout(rate=0.2),
     keras.layers.Dense(3, activation='softmax')
 ])
 
@@ -45,9 +45,9 @@ model.compile(optimizer="adam", metrics=["accuracy"],
 
 # 인공신경망을 학습시킵니다.
 print("\n\n************ TRAINING START ************ ")
-early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=30, mode= 'auto')
+#early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=30, mode= 'auto') ,callbacks=[early_stop]
 history = model.fit(dr.train_X, dr.train_Y, epochs=EPOCHS, batch_size=5,
-                    validation_data=(dr.test_X, dr.test_Y),callbacks=[early_stop]
+                    validation_data=(dr.test_X, dr.test_Y)
                     )
 
 model.summary()
