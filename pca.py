@@ -10,8 +10,9 @@ import numpy as np
 
 dr = data_reader.DataReader()
 
-columns = ['time_launch','time_dinner','time_late night snack','feeling_plearsure / joy', 'feeling_sadness / depressed',
-           'feeling_annoying','weather_sunny','weather_cloudy / rain','weather_etc']
+columns = ['age_10대','age_20대','age_30대','age_40대', 'age_50대 이상',
+           'sex_F','sex_M','time_launch','time_dinner','time_late night snack','feeling_plearsure / joy',
+           'feeling_sadness / depressed','feeling_annoying','weather_sunny','weather_cloudy / rain','weather_etc']
 
 df = pd.DataFrame(dr.train_X, columns=columns)
 df['target']=dr.train_Y
@@ -20,12 +21,13 @@ print(df.head(3))
 
 dr_scaled = StandardScaler().fit_transform(df.iloc[:, :-1])
 
-pca = PCA(n_components=10)
+pca = PCA(n_components=2)
 pca.fit(dr_scaled)
 dr_pca = pca.transform(dr_scaled)
 print(dr_pca.shape)
 
 pca_columns=['pca_component_1','pca_component_2']
+
 dr_pca = pd.DataFrame(dr_pca, columns=pca_columns)
 dr_pca['target']=dr.train_Y
 print(dr_pca.head(3))

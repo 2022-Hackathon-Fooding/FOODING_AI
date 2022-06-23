@@ -2,7 +2,7 @@
 Author : Byunghyun Ban
 Date : 2020.07.24.
 """
-
+#file = open("data/after_one-hot_encoding_new.csv")
 import tensorflow as tf
 import data_reader
 import network
